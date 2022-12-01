@@ -1,0 +1,21 @@
+.cabecalho {
+  height: 8.563rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icone {
+  width: 200px;
+}
+
+.menu {
+  width: 18.75rem;
+  margin-right: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  color: #b63159;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
