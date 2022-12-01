@@ -1,6 +1,7 @@
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import "../../styles/Login.css";
 
 const validacaoSchema = yup.object({
   nome: yup.string().required("O campo nome não pode ser vazio"),
@@ -26,26 +27,43 @@ const Login = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(valida)}>
-        <label htmlFor="nome">Nome</label>
-        <input
-          type="text"
-          id="nome"
-          name="nome"
-          placeholder="Nome"
-          {...register("nome")}
-        />
-        <p>{errors.nome?.message}</p>
-        <label htmlFor="senha">Senha</label>
-        <input
-          type="password"
-          id="senha"
-          name="senha"
-          placeholder="Senha"
-          {...register("senha")}
-        />
-        <p>{errors.senha?.message}</p>
-        <button type="submit">Entrar</button>
+      <h1 className="tituloLogin">Faça seu Login</h1>
+      <form onSubmit={handleSubmit(valida)} className="formulario">
+        <div className="formularioContainer">
+          <div className="inputContainer">
+            <label className="nomeLogin" htmlFor="nome">
+              Nome:
+            </label>
+            <input
+              className="inputLogin"
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Nome"
+              {...register("nome")}
+            />
+            <p>{errors.nome?.message}</p>
+          </div>
+          <div className="inputContainer">
+            <label className="nomeLogin" htmlFor="senha">
+              Senha:
+            </label>
+            <input
+              className="inputLogin"
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Senha"
+              {...register("senha")}
+            />
+            <p>{errors.senha?.message}</p>
+          </div>
+          <div>
+            <button className="botao" type="submit">
+              Entrar
+            </button>
+          </div>
+        </div>
       </form>
     </>
   );
