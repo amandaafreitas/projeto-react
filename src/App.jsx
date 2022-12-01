@@ -1,10 +1,16 @@
 // import reactLogo from './assets/react.svg'
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import TelaEdicao from "./pages/Tela-edicao";
 
 function App() {
   return (
     <>
-      <h1>Bem vindo ao Cine cine</h1>
+      <Router>
+        <Routes>
+          <Route path="/tela-edicao" element={<TelaEdicao />} />
+        </Routes>
+      </Router>
     </>
   );
 }

@@ -1,21 +1,42 @@
+import "../styles/tela.css";
+import "../styles/telaEdicao.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import CardFilmes from "../components/CardFilmes";
+
 const TelaEdicao = () => {
+  const [filmes, setFilmes] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://estao-servidos.onrender.com/filmes")
+      .then((response) => {
+        setFilmes(response.data);
+      })
+      .catch(() => {
+        console.log("Deu tudo errado");
+      });
+  }, []);
+
   return (
     <>
-      <h1>Cadastrar filme</h1>
-      <form>
-        <label htmlFor="titulo">Título</label>
-        <input type="text" id="titulo" />
-        <label htmlFor="diretor">Diretor(a)</label>
-        <input type="text" id="diretor" />
-        <label htmlFor="duracao">Duração</label>
-        <input type="text" id="diretor" />
-        <label htmlFor="classificacao">Classificaçao</label>
-        <input type="text" id="classificacao" />
-        <label htmlFor="distribuidora">Distribuidora</label>
-        <input type="text" id="distribuidora" />
-        <label htmlFor="genero">Gênero</label>
-        <input type="text" id="genero" />
-      </form>
+      <h1>Cadastrar filmes</h1>
+      <CardFilmes botao="Cadastrar" setFilmesPagina={setFilmes} />
+      <div className="filmesCadastrados">
+        {filmes.map((filme) => {
+          return (
+            <CardFilmes
+              key={filme.id}
+              idFilme={filme.id}
+              titulo={filme.titulo}
+              ano={filme.ano}
+              direcao={filme.direcao}
+              imagem={filme.imagem}
+              botao="Editar"
+              setFilmesPagina={setFilmes}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
