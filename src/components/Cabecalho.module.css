@@ -19,3 +19,11 @@
   font-size: 1.25rem;
   font-weight: 400;
 }
+
+a:visited {
+  color: #b63159;
+}
+
+a:hover {
+  color: #fff;
+}

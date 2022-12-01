@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.footer {
+  background-color: #747474;
+  padding-top: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.colunas {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul li {
+  list-style: none;
+  padding: 6px 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(255, 115, 0);
+}
