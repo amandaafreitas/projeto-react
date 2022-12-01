@@ -31,7 +31,7 @@ const TelaEdicao = () => {
               ano={filme.ano}
               direcao={filme.direcao}
               imagem={filme.imagem}
-              botao="Editar"
+              botao="Salvar"
               setFilmesPagina={setFilmes}
             />
           );
