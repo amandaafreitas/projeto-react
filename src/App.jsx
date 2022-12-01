@@ -9,6 +9,7 @@ function App() {
     <>
       <Router>
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/tela-edicao" element={<TelaEdicao />} />
         </Routes>
       </Router>

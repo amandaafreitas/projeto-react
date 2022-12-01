@@ -1,5 +1,6 @@
 .filmesCadastrados {
   margin-top: 50px;
+  padding: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
