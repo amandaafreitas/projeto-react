@@ -19,7 +19,7 @@ const TelaEdicao = () => {
 
   return (
     <>
-      <h1>Cadastrar filmes</h1>
+      <h1 className="titulo-cadastrar">Cadastrar filme</h1>
       <CardFilmes botao="Cadastrar" setFilmesPagina={setFilmes} />
       <div className="filmesCadastrados">
         {filmes.map((filme) => {
