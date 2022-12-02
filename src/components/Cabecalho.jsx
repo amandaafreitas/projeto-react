@@ -4,12 +4,13 @@ const Cabecalho = () => {
   return (
     <>
       <nav className={styles.cabecalho}>
-        <img className={styles.icone} src="/logo-ticket.svg" alt="" />
+        <Link to="/">
+          <img className={styles.icone} src="/logo-ticket.svg" alt="" />
+        </Link>
         <ul className={styles.menu}>
           <Link to="/filmes">
             <li>Filmes</li>
           </Link>
-          <li>Cinemas</li>
           <Link to="/login">
             <li>Login</li>
           </Link>

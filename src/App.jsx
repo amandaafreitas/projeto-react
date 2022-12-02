@@ -19,7 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/tela-edicao" element={<TelaEdicao />} />
           <Route path="/filmes" element={<Filmes />} />
-          <Route path="/emcartaz" element={<EmCartaz />} />
+          <Route path="/" element={<EmCartaz />} />
         </Routes>
         <Rodape />
       </Router>
